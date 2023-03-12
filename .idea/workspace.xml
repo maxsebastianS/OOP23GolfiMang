@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="53b87a47-b9e1-4775-b6cb-085cab110cd3" name="Changes" comment="Lisasin 5 rada">
-      <change afterPath="$PROJECT_DIR$/src/Golfiväljak.java" afterDir="false" />
+    <list default="true" id="53b87a47-b9e1-4775-b6cb-085cab110cd3" name="Changes" comment="Arendasin edasi golfimängu, lisades Golfiväljak.java faili alustamängu meetodi, mis teeb HCP ümber protsendiks, mis võimalusega sa tabad palli hästi ning seejärel leiab löögipikkuse kindlas vahemikus. While tsükkel kestab, kuni rajapikkus on alla 5m.">
+      <change afterPath="$PROJECT_DIR$/src/Golfikepp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Golfimäng.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Golfimäng.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Golfiväljak.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Golfiväljak.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Mängija.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Mängija.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Rada.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Rada.java" afterDir="false" />
     </list>
@@ -72,26 +73,19 @@
       <option name="project" value="LOCAL" />
       <updated>1678563097219</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Arendasin edasi golfimängu, lisades Golfiväljak.java faili alustamängu meetodi, mis teeb HCP ümber protsendiks, mis võimalusega sa tabad palli hästi ning seejärel leiab löögipikkuse kindlas vahemikus. While tsükkel kestab, kuni rajapikkus on alla 5m.">
+      <created>1678629391618</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1678629391618</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Lisasin 5 rada" />
-    <option name="LAST_COMMIT_MESSAGE" value="Lisasin 5 rada" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/Golfiväljak.java</url>
-          <line>15</line>
-          <properties class="Golfiväljak" method="alustamängu">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Arendasin edasi golfimängu, lisades Golfiväljak.java faili alustamängu meetodi, mis teeb HCP ümber protsendiks, mis võimalusega sa tabad palli hästi ning seejärel leiab löögipikkuse kindlas vahemikus. While tsükkel kestab, kuni rajapikkus on alla 5m." />
+    <option name="LAST_COMMIT_MESSAGE" value="Arendasin edasi golfimängu, lisades Golfiväljak.java faili alustamängu meetodi, mis teeb HCP ümber protsendiks, mis võimalusega sa tabad palli hästi ning seejärel leiab löögipikkuse kindlas vahemikus. While tsükkel kestab, kuni rajapikkus on alla 5m." />
   </component>
 </project>

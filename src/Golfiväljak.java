@@ -1,44 +1,78 @@
+import java.sql.SQLOutput;
 import java.util.List;
 import java.util.Random;
+import java.util.Scanner;
 
 public class Golfiväljak {
     private List<Rada> golfirajad;
 
+    private List<Golfikepp> golfikepid;
+
     public Golfiväljak(List<Rada> golfirajad) {
         this.golfirajad = golfirajad;
+        this.golfikepid = golfikepid;
     }
     public double löögiprotsent(Mängija mängija){
         double hcp = mängija.getHCP();
         double täpsus = (100-hcp);
         return täpsus;
     }
+    public int väljakuPAR(List<Rada> golfirajad){
+        int valjakupar = 0;
+        for (Rada rada : golfirajad){
+            valjakupar+= rada.raja_par;
+        }
+        return valjakupar;
+    }
 
     public void alustamängu(Mängija mängija){
-        System.out.println("mang algab");
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Mäng algab - väljak: Estonian Golf & Country Club - Sea Course" );
         double täpsus = löögiprotsent(mängija);
         Random r = new Random();
+        int löökidearv_kokku = 0;
         for (Rada rada : golfirajad){
-            System.out.println("rada number " + rada.rajanumber);
-            int löökidearv = 0;
-            while(rada.rajapikkus > 5){
+            System.out.println(rada.rajanumber + ". rada - raja pikkus " + rada.rajapikkus + " meetrit.");
+            int löökidearv_rajal = 0;
+            while(Math.abs(rada.rajapikkus) > 5){
                 double random = r.nextInt(100) + 1;
+                System.out.println("Sisesta golfikepp millega soovid lüüa: ");
+                char inputChar = scanner.next().charAt(0);
+                //System.out.println("sisestatud kepp:" + inputChar);
                 if (random < täpsus) {
-                    int hea_look_alumine = 100;
-                    int hea_look_ulemine = 180;
+                    int hea_look_alumine = mängija.Minimaalsepikkuseleidja(inputChar);
+                    int hea_look_ulemine = mängija.Maksimaalsepikkuseleidja(inputChar);
                     int loogipikkus = r.nextInt(hea_look_ulemine-hea_look_alumine)+hea_look_alumine;
-                    rada.rajapikkus -= loogipikkus;
+                    if (rada.rajapikkus < 0) rada.rajapikkus += loogipikkus;
+                    else rada.rajapikkus -= loogipikkus;
                     System.out.println("Hea löök! Löögipikkus oli "+ loogipikkus +"m");
-                    löökidearv++;
+                    if (Math.abs(rada.rajapikkus) < 5){
+                        System.out.println("Pall veeres auku!");
+                    }
+                    else{
+                        System.out.println("Greenini on veel " + Math.abs(rada.rajapikkus) + " meetrit.");
+                    }
+                    löökidearv_rajal++;
                 }
                 else{
                     int halb_look_alumine = 20;
                     int halb_look_ulemine = 50;
                     int loogipikkus = r.nextInt(halb_look_ulemine-halb_look_alumine)+halb_look_alumine;
-                    rada.rajapikkus -= loogipikkus;
+                    if (rada.rajapikkus < 0) rada.rajapikkus += loogipikkus;
+                    else rada.rajapikkus -= loogipikkus;
                     System.out.println("Halb löök! Löögipikkus oli "+ loogipikkus +"m");
-                    löökidearv++;
+                    if (Math.abs(rada.rajapikkus) < 5){
+                        System.out.println("Pall veeres auku!");
+                    }
+                    else{
+                        System.out.println("Greenini on veel " + Math.abs(rada.rajapikkus) + " meetrit.");
+                    }
+                    löökidearv_rajal++;
                 }
             }
+            System.out.println("Läbisid raja " + löökidearv_rajal + "löögiga, raja par oli " + rada.raja_par );
+            löökidearv_kokku += löökidearv_rajal;
         }
+        System.out.println("Mäng läbi, kokku tegid " + löökidearv_kokku + " lööki. Väljaku par oli " + väljakuPAR(golfirajad));
     }
 }

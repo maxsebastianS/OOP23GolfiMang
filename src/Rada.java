@@ -1,7 +1,7 @@
 public class Rada {
     int rajanumber;
     int rajapikkus;
-    private int raja_par;
+    int raja_par;
 
     public Rada(int rajanumber, int rajapikkus, int raja_par) {
         this.rajanumber = rajanumber;
