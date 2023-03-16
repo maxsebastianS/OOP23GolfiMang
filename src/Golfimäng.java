@@ -22,15 +22,17 @@ public class Golfimäng {
         Golfikepp Pitchingwedge = new Golfikepp('P',100,80);
         Golfikepp Sandwedge = new Golfikepp('S',60,20);
         Golfikepp Putter = new Golfikepp('p',10,5);
-        List<Golfikepp> Mängija1_golfikepid = new ArrayList<>();
-        Mängija1_golfikepid.add(nr9);
-        Mängija1_golfikepid.add(nr8);
-        Mängija1_golfikepid.add(nr7);
-        Mängija1_golfikepid.add(nr6);
-        Mängija1_golfikepid.add(Pitchingwedge);
-        Mängija1_golfikepid.add(Sandwedge);
-        Mängija1_golfikepid.add(Putter);
-        Mängija Mangija1 = new Mängija("Max",23,Mängija1_golfikepid);
+        Golfikepp Driver = new Golfikepp('D',320,200);
+        List<Golfikepp> Mängija1Golfikepid = new ArrayList<>();
+        Mängija1Golfikepid.add(nr9);
+        Mängija1Golfikepid.add(nr8);
+        Mängija1Golfikepid.add(nr7);
+        Mängija1Golfikepid.add(nr6);
+        Mängija1Golfikepid.add(Pitchingwedge);
+        Mängija1Golfikepid.add(Sandwedge);
+        Mängija1Golfikepid.add(Putter);
+        Mängija1Golfikepid.add(Driver);
+        Mängija Mangija1 = new Mängija("Max",23,Mängija1Golfikepid);
         EGCC.alustamängu(Mangija1);
     }
 }
