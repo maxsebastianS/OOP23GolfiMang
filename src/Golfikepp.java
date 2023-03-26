@@ -1,16 +1,16 @@
 public class Golfikepp {
-    private char kepichar;
+    private String kepistring;
     private int maksimaalne_hea_pikkus;
     private int minimaalne_hea_pikkus;
 
-    public Golfikepp(char kepichar, int maksimaalne_hea_pikkus, int minimaalne_hea_pikkus) {
-        this.kepichar = kepichar;
+    public Golfikepp(String kepistring, int maksimaalne_hea_pikkus, int minimaalne_hea_pikkus) {
+        this.kepistring = kepistring;
         this.maksimaalne_hea_pikkus = maksimaalne_hea_pikkus;
         this.minimaalne_hea_pikkus = minimaalne_hea_pikkus;
     }
 
-    public char getKepichar() {
-        return kepichar;
+    public String getKepistring() {
+        return kepistring;
     }
     public int getMaksimaalne_hea_pikkus() {
         return maksimaalne_hea_pikkus;

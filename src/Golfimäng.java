@@ -13,11 +13,11 @@ public class Golfimäng {
                 String rida = sc.nextLine();
                 String[] tükid = rida.split(", ");
 
-                char kepichar = tükid[0].charAt(0);
+                String kepistring = tükid[3];
                 int maxPikkus = Integer.parseInt(tükid[1]);
                 int minPikkus = Integer.parseInt(tükid[2]);
 
-                tulemus.add(new Golfikepp(kepichar, maxPikkus, minPikkus));
+                tulemus.add(new Golfikepp(kepistring, maxPikkus, minPikkus));
             }
         }
         return tulemus;

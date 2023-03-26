@@ -12,6 +12,7 @@ public class Golfiväljak {
         this.golfirajad = golfirajad;
         this.golfikepid = golfikepid;
     }
+
     public double löögiprotsent(Mängija mängija){
         double hcp = mängija.getHCP();
         double täpsus = (100-hcp);
@@ -25,6 +26,7 @@ public class Golfiväljak {
         return valjakupar;
     }
 
+
     public void alustamängu(Mängija mängija){
         Scanner scanner = new Scanner(System.in);
         System.out.println("Mäng algab - väljak: Estonian Golf & Country Club - Sea Course" );
@@ -37,11 +39,18 @@ public class Golfiväljak {
             while(Math.abs(rada.rajapikkus) > 5){
                 double random = r.nextInt(100) + 1;
                 System.out.println("Sisesta golfikepp millega soovid lüüa: ");
-                char inputChar = scanner.next().charAt(0);
+                String inputstring = scanner.next();
+                while (!(mängija.golfikeppOlemas(inputstring))){
+                    System.out.println(inputstring + " nimelist golfikeppi teil ei ole.");
+                    System.out.println("Sisesta golfikepp millega soovid lüüa: ");
+                    inputstring = scanner.next();
+                }
+
+
                 //System.out.println("sisestatud kepp:" + inputChar);
+                int hea_look_alumine = mängija.Minimaalsepikkuseleidja(inputstring);
+                int hea_look_ulemine = mängija.Maksimaalsepikkuseleidja(inputstring);
                 if (random < täpsus) {
-                    int hea_look_alumine = mängija.Minimaalsepikkuseleidja(inputChar);
-                    int hea_look_ulemine = mängija.Maksimaalsepikkuseleidja(inputChar);
                     int loogipikkus = r.nextInt(hea_look_ulemine-hea_look_alumine)+hea_look_alumine;
                     if (rada.rajapikkus < 0) rada.rajapikkus += loogipikkus;
                     else rada.rajapikkus -= loogipikkus;
@@ -55,8 +64,8 @@ public class Golfiväljak {
                     löökidearv_rajal++;
                 }
                 else{
-                    int halb_look_alumine = 20;
-                    int halb_look_ulemine = 50;
+                    int halb_look_alumine = hea_look_alumine/2;
+                    int halb_look_ulemine = hea_look_ulemine/2;
                     int loogipikkus = r.nextInt(halb_look_ulemine-halb_look_alumine)+halb_look_alumine;
                     if (rada.rajapikkus < 0) rada.rajapikkus += loogipikkus;
                     else rada.rajapikkus -= loogipikkus;
@@ -75,4 +84,5 @@ public class Golfiväljak {
         }
         System.out.println("Mäng läbi, kokku tegid " + löökidearv_kokku + " lööki. Väljaku par oli " + väljakuPAR(golfirajad));
     }
+
 }
