@@ -36,11 +36,11 @@ public class Golfiväljak {
         for (Rada rada : golfirajad){
             System.out.println(rada.rajanumber + ". rada - raja pikkus " + rada.rajapikkus + " meetrit.");
             int löökidearv_rajal = 0;
-            while(Math.abs(rada.rajapikkus) > 5){
+            while(Math.abs(rada.rajapikkus) > 3) {
                 double random = r.nextInt(100) + 1;
                 System.out.println("Sisesta golfikepp millega soovid lüüa: ");
                 String inputstring = scanner.next();
-                while (!(mängija.golfikeppOlemas(inputstring))){
+                while (!(mängija.golfikeppOlemas(inputstring))) {
                     System.out.println(inputstring + " nimelist golfikeppi teil ei ole.");
                     System.out.println("Sisesta golfikepp millega soovid lüüa: ");
                     inputstring = scanner.next();
@@ -50,36 +50,41 @@ public class Golfiväljak {
                 //System.out.println("sisestatud kepp:" + inputChar);
                 int hea_look_alumine = mängija.Minimaalsepikkuseleidja(inputstring);
                 int hea_look_ulemine = mängija.Maksimaalsepikkuseleidja(inputstring);
-                if (random < täpsus) {
-                    int loogipikkus = r.nextInt(hea_look_ulemine-hea_look_alumine)+hea_look_alumine;
-                    if (rada.rajapikkus < 0) rada.rajapikkus += loogipikkus;
-                    else rada.rajapikkus -= loogipikkus;
-                    System.out.println("Hea löök! Löögipikkus oli "+ loogipikkus +"m");
-                    if (Math.abs(rada.rajapikkus) < 5){
-                        System.out.println("Pall veeres auku!");
+                if (Math.abs(rada.rajapikkus) > 10) {
+                    if (random < täpsus) {
+                        int loogipikkus = r.nextInt(hea_look_ulemine - hea_look_alumine) + hea_look_alumine;
+                        if (Math.abs(rada.rajapikkus - loogipikkus) <= 3) {
+                            System.out.println("Hea löök! Löögipikkus oli " + rada.rajapikkus + "m");
+                        } else System.out.println("Hea löök! Löögipikkus oli " + loogipikkus + "m");
+                        if (rada.rajapikkus < 0) rada.rajapikkus += loogipikkus;
+                        else rada.rajapikkus -= loogipikkus;
+                    } else {
+                        int halb_look_alumine = hea_look_alumine / 2;
+                        int halb_look_ulemine = hea_look_ulemine / 2;
+                        int loogipikkus = r.nextInt(halb_look_ulemine - halb_look_alumine) + halb_look_alumine;
+                        if (Math.abs(rada.rajapikkus - loogipikkus) <= 3) {
+                            System.out.println("Hea halb löök! Löögipikkus oli " + rada.rajapikkus + "m");
+                        } else System.out.println("Halb löök! Löögipikkus oli " + loogipikkus + "m");
+                        if (rada.rajapikkus < 0) rada.rajapikkus += loogipikkus;
+                        else rada.rajapikkus -= loogipikkus;
                     }
-                    else{
-                        System.out.println("Greenini on veel " + Math.abs(rada.rajapikkus) + " meetrit.");
-                    }
-                    löökidearv_rajal++;
                 }
                 else{
-                    int halb_look_alumine = hea_look_alumine/2;
-                    int halb_look_ulemine = hea_look_ulemine/2;
-                    int loogipikkus = r.nextInt(halb_look_ulemine-halb_look_alumine)+halb_look_alumine;
+                    int loogipikkus = r.nextInt(hea_look_ulemine - hea_look_alumine) + hea_look_alumine;
+                    if (Math.abs(Math.abs(rada.rajapikkus) - loogipikkus) <= 3) {
+                        System.out.println("Hea löök! Löögipikkus oli " + Math.abs(rada.rajapikkus) + "m");
+                    } else System.out.println("Halb löök! Löögipikkus oli " + loogipikkus + "m");
                     if (rada.rajapikkus < 0) rada.rajapikkus += loogipikkus;
                     else rada.rajapikkus -= loogipikkus;
-                    System.out.println("Halb löök! Löögipikkus oli "+ loogipikkus +"m");
-                    if (Math.abs(rada.rajapikkus) < 5){
-                        System.out.println("Pall veeres auku!");
-                    }
-                    else{
-                        System.out.println("Greenini on veel " + Math.abs(rada.rajapikkus) + " meetrit.");
-                    }
-                    löökidearv_rajal++;
                 }
+                if (Math.abs(rada.rajapikkus) <= 3) {
+                    System.out.println("Pall veeres auku!");
+                } else {
+                    System.out.println("Auguni on veel " + Math.abs(rada.rajapikkus) + " meetrit.");
+                }
+                löökidearv_rajal++;
             }
-            System.out.println("Läbisid raja " + löökidearv_rajal + "löögiga, raja par oli " + rada.raja_par );
+            System.out.println("Läbisid raja " + löökidearv_rajal + ". löögiga, raja par oli " + rada.raja_par );
             löökidearv_kokku += löökidearv_rajal;
         }
         System.out.println("Mäng läbi, kokku tegid " + löökidearv_kokku + " lööki. Väljaku par oli " + väljakuPAR(golfirajad));

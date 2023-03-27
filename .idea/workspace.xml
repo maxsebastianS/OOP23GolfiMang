@@ -7,11 +7,7 @@
     <list default="true" id="53b87a47-b9e1-4775-b6cb-085cab110cd3" name="Changes" comment="github test">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/golfikepp.txt" beforeDir="false" afterPath="$PROJECT_DIR$/golfikepp.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Golfikepp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Golfikepp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Golfimäng.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Golfimäng.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Golfiväljak.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Golfiväljak.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Mängija.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Mängija.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Rada.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Rada.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +26,9 @@
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
   </component>
   <component name="ProjectId" id="2MsgxLZxpqgLOEp6qp83Dz0H4m5" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -124,8 +123,8 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Golfiväljak.java</url>
-          <line>40</line>
-          <option name="timeStamp" value="3" />
+          <line>35</line>
+          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
