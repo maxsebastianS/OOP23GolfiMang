@@ -27,22 +27,29 @@ public class Mängija {
         }
         return scorecard;
     }
-    public int Maksimaalsepikkuseleidja(Character c){
+    public int Maksimaalsepikkuseleidja(String c){
         for (Golfikepp golfikepp : golfikepid){
-            if (golfikepp.getKepichar() == c){
+            if (golfikepp.getKepistring().equals(c.toLowerCase())){
                 int hea_look_ulemine = golfikepp.getMaksimaalne_hea_pikkus();
                 return hea_look_ulemine;
             }
         }
         return 0;
     }
-    public int Minimaalsepikkuseleidja(Character c){
+    public int Minimaalsepikkuseleidja(String c){
         for (Golfikepp golfikepp : golfikepid){
-            if (golfikepp.getKepichar() == c){
+            if (golfikepp.getKepistring().equals(c.toLowerCase())){
                 int hea_look_alumine = golfikepp.getMinimaalne_hea_pikkus();
                 return hea_look_alumine;
             }
         }
         return 0;
+    }
+    public boolean golfikeppOlemas(String c){
+        for (Golfikepp golfikepp : golfikepid){
+            if (golfikepp.getKepistring().equals(c.toLowerCase())){
+                return true;
+            }}
+        return false;
     }
 }

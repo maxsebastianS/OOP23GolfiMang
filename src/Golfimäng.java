@@ -1,8 +1,28 @@
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class Golfimäng {
-    public static void main(String[] args) {
+    public static List<Golfikepp> loeGolfikepid(String failinimi) throws Exception {
+        List<Golfikepp> tulemus = new ArrayList<>();
+        File fail = new File(failinimi);
+        try (Scanner sc = new java.util.Scanner(fail, "UTF-8")) {
+            while (sc.hasNextLine()) {
+                String rida = sc.nextLine();
+                String[] tükid = rida.split(", ");
+
+                String kepistring = tükid[3];
+                int maxPikkus = Integer.parseInt(tükid[1]);
+                int minPikkus = Integer.parseInt(tükid[2]);
+
+                tulemus.add(new Golfikepp(kepistring, maxPikkus, minPikkus));
+            }
+        }
+        return tulemus;
+    }
+    public static void main(String[] args) throws Exception {
         Rada rada1 = new Rada(1,456,5);
         Rada rada2 = new Rada(2,298,4);
         Rada rada3 = new Rada(3,310,4);
@@ -15,24 +35,9 @@ public class Golfimäng {
         golfirajad.add(rada4);
         golfirajad.add(rada5);
         Golfiväljak EGCC = new Golfiväljak(golfirajad);
-        Golfikepp nr9 = new Golfikepp('9',120,90);
-        Golfikepp nr8 = new Golfikepp('8',140,120);
-        Golfikepp nr7 = new Golfikepp('7',150,120);
-        Golfikepp nr6 = new Golfikepp('6',180,150);
-        Golfikepp Pitchingwedge = new Golfikepp('P',100,80);
-        Golfikepp Sandwedge = new Golfikepp('S',60,20);
-        Golfikepp Putter = new Golfikepp('p',10,5);
-        Golfikepp Driver = new Golfikepp('D',320,200);
-        List<Golfikepp> Mängija1Golfikepid = new ArrayList<>();
-        Mängija1Golfikepid.add(nr9);
-        Mängija1Golfikepid.add(nr8);
-        Mängija1Golfikepid.add(nr7);
-        Mängija1Golfikepid.add(nr6);
-        Mängija1Golfikepid.add(Pitchingwedge);
-        Mängija1Golfikepid.add(Sandwedge);
-        Mängija1Golfikepid.add(Putter);
-        Mängija1Golfikepid.add(Driver);
+        List<Golfikepp> Mängija1Golfikepid = loeGolfikepid("golfikepp.txt");
         Mängija Mangija1 = new Mängija("Max",23,Mängija1Golfikepid);
         EGCC.alustamängu(Mangija1);
     }
+
 }

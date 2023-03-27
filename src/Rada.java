@@ -9,6 +9,14 @@ public class Rada {
         this.raja_par = raja_par;
     }
 
+    public int getRajapikkus() {
+        return rajapikkus;
+    }
+
+    public void setRajapikkus(int rajapikkus) {
+        this.rajapikkus = rajapikkus;
+    }
+
     public void mängi (Rada rada){
 
     }
