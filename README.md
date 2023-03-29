@@ -29,7 +29,7 @@ Golfiväljak.java
 - Programm läbib ükshaaval golfiradade listis olevaid golfiradasid ja seni, kuni golfiauguni ei ole alla 3 (meetri), küsib kasutajalt golfikeppi ja juhuslikult arvutab võimaluse, kas löök läheb hästi või mitte.
 - Kui löök läheb hästi, võtab programm golfikepi hea ülemise ja hea alumise pikkuse vahelt juhusliku arvu ja lahutab  rajapikkusest löögipikkuse.
 - Kui löök läheb halvasti, võtab programm golfikepi hea ülemise ja hea alumise pikkuse ning jagab selle kahega ning võtab sellest vahemikust juhusliku arvu ja lahutab rajapikkusest selle arvu.
-- Kui tehtud löök on 3 meetri täpsusega, on löök justkui täpne ja pall läheb auku.
+- Kui tehtud löök on 2 meetri täpsusega, on löök justkui täpne ja pall läheb auku.
 
 
 Protsess:

@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="53b87a47-b9e1-4775-b6cb-085cab110cd3" name="Changes" comment="Bug fixes ja lisasin rohkem golfikeppe">
+    <list default="true" id="53b87a47-b9e1-4775-b6cb-085cab110cd3" name="Changes" comment="Bug fixes, golfikepp.txt loetavamaks tegemine, HCP sisestus ja projekti kirjelduse tegemine.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/golfikepp.txt" beforeDir="false" afterPath="$PROJECT_DIR$/golfikepp.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Golfimäng.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Golfimäng.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Golfiväljak.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Golfiväljak.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Mängija.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Mängija.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,7 +120,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679922947021</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Bug fixes, golfikepp.txt loetavamaks tegemine, HCP sisestus ja projekti kirjelduse tegemine.">
+      <created>1680111263887</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1680111263887</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -145,7 +148,8 @@
     <MESSAGE value="Golfikeppe loeb main failist golfikepp.txt" />
     <MESSAGE value="github test" />
     <MESSAGE value="Bug fixes ja lisasin rohkem golfikeppe" />
-    <option name="LAST_COMMIT_MESSAGE" value="Bug fixes ja lisasin rohkem golfikeppe" />
+    <MESSAGE value="Bug fixes, golfikepp.txt loetavamaks tegemine, HCP sisestus ja projekti kirjelduse tegemine." />
+    <option name="LAST_COMMIT_MESSAGE" value="Bug fixes, golfikepp.txt loetavamaks tegemine, HCP sisestus ja projekti kirjelduse tegemine." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
