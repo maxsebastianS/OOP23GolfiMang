@@ -29,7 +29,7 @@ public class Golfiväljak {
 
     public void alustamängu(Mängija mängija){
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Mäng algab - väljak: Estonian Golf & Country Club - Sea Course" );
+        System.out.println("Mäng algab - väljak: Estonian Golf & Country Club - Stone Course" );
         double täpsus = löögiprotsent(mängija);
         Random r = new Random();
         int löökidearv_kokku = 0;
@@ -63,7 +63,7 @@ public class Golfiväljak {
                         int halb_look_ulemine = hea_look_ulemine / 2;
                         int loogipikkus = r.nextInt(halb_look_ulemine - halb_look_alumine) + halb_look_alumine;
                         if (Math.abs(rada.rajapikkus - loogipikkus) <= 3) {
-                            System.out.println("Hea halb löök! Löögipikkus oli " + rada.rajapikkus + "m");
+                            System.out.println("Hea löök! Löögipikkus oli " + rada.rajapikkus + "m");
                         } else System.out.println("Halb löök! Löögipikkus oli " + loogipikkus + "m");
                         if (rada.rajapikkus < 0) rada.rajapikkus += loogipikkus;
                         else rada.rajapikkus -= loogipikkus;

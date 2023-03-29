@@ -2,14 +2,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Mängija {
-    private String nimi;
+
     private double HCP;
     private List<Integer> scorecard;
 
     private List<Golfikepp> golfikepid;
 
-    public Mängija(String nimi, double HCP, List<Golfikepp> golfikepid) {
-        this.nimi = nimi;
+    public Mängija(double HCP, List<Golfikepp> golfikepid) {
         this.HCP = HCP;
         scorecard = new ArrayList<>();
         this.golfikepid = golfikepid;

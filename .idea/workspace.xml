@@ -4,10 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="53b87a47-b9e1-4775-b6cb-085cab110cd3" name="Changes" comment="github test">
+    <list default="true" id="53b87a47-b9e1-4775-b6cb-085cab110cd3" name="Changes" comment="Bug fixes ja lisasin rohkem golfikeppe">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/golfikepp.txt" beforeDir="false" afterPath="$PROJECT_DIR$/golfikepp.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Golfimäng.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Golfimäng.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Golfiväljak.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Golfiväljak.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Mängija.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Mängija.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,8 +110,33 @@
       <option name="project" value="LOCAL" />
       <updated>1679836258018</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Bug fixes ja lisasin rohkem golfikeppe">
+      <created>1679922802478</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1679922802478</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Bug fixes ja lisasin rohkem golfikeppe">
+      <created>1679922947021</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1679922947021</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Lisasin 5 rada" />
@@ -116,15 +144,20 @@
     <MESSAGE value="Lisasin golfikepp.java mis salvestab mängija alla tema golfikepid ning nende golfikeppide maksimaalse ning minimaalse löögipikkuse. Golfimängu alla tegin while tsükkli sisse kasutajalt kepi küsimise ning seejärel löögi pikkuse väljastamise." />
     <MESSAGE value="Golfikeppe loeb main failist golfikepp.txt" />
     <MESSAGE value="github test" />
-    <option name="LAST_COMMIT_MESSAGE" value="github test" />
+    <MESSAGE value="Bug fixes ja lisasin rohkem golfikeppe" />
+    <option name="LAST_COMMIT_MESSAGE" value="Bug fixes ja lisasin rohkem golfikeppe" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/Golfiväljak.java</url>
-          <line>35</line>
-          <option name="timeStamp" value="5" />
+          <line>29</line>
+          <properties class="Golfiväljak" method="alustamängu">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="10" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
